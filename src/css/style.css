@@ -1,0 +1,16 @@
+body {
+  background-color: black;
+}
+
+.game_field {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game_cell {
+  width: 24.5vw;
+  height: 24vh;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+}
