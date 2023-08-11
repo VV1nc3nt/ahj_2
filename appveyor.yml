@@ -22,7 +22,7 @@ deploy:
   auth_token:
     secure: GITHUB_TOKEN
   artifact: /.*\.nupkg/
-  tag: ahj_02
+  tag: true
   force_update: true
   draft: false
   prerelease: false
