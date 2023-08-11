@@ -16,9 +16,14 @@ build:
 test_script:
   - npm run lint && npm test
 
-deploy_script:
-  git config --global credential.helper 
-  store  git config --global user.name VV1nc3nt
-  git config --global user.email gormmyz@gmail.com > "$HOME/.git-credentials"
-  echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com"
-  npx push-dir --dir=dist --branch=gh-pages --force --verbose
+deploy:
+  release: myproduct v$(appveyor_build_version)
+  provider: GitHub
+  auth_token:
+    secure: GITHUB_TOKEN # your encrypted token from github
+  artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
+    appveyor_repo_tag: true        # deploy on tag push only
