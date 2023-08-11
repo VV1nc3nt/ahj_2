@@ -26,4 +26,3 @@ deploy:
   prerelease: false
   on:
     branch: main
-    appveyor_repo_tag: test
