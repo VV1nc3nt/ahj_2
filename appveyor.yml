@@ -19,6 +19,6 @@ test_script:
 deploy_script:
   git config --global credential.helper 
   store  git config --global user.name VV1nc3nt
-  git config --global user.email ci@appveyor.com > "$HOME/.git-credentials"
+  git config --global user.email gormmyz@gmail.com > "$HOME/.git-credentials"
   echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com"
   npx push-dir --dir=dist --branch=gh-pages --force --verbose
