@@ -17,13 +17,13 @@ test_script:
   - npm run lint && npm test
 
 deploy:
-  release: myproduct v$(appveyor_build_version)
+  release: v$(appveyor_build_version)
   provider: GitHub
   auth_token:
-    secure: GITHUB_TOKEN # your encrypted token from github
-  artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
+    secure: GITHUB_TOKEN
+  artifact: /.*\.nupkg/
   draft: false
   prerelease: false
   on:
-    branch: main                 # release from master branch only
-    appveyor_repo_tag: true        # deploy on tag push only
+    branch: main
+    appveyor_repo_tag: true
