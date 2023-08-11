@@ -21,7 +21,6 @@ deploy:
   provider: GitHub
   auth_token:
     secure: GITHUB_TOKEN
-  artifact: /.*\.nupkg/
   draft: false
   prerelease: false
   on:
