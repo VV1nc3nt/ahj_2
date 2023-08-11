@@ -24,6 +24,3 @@ deploy:
   artifact: /.*\.nupkg/
   draft: false
   prerelease: false
-  on:
-    branch: main
-    appveyor_repo_tag: true
