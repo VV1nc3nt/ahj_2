@@ -22,9 +22,5 @@ deploy:
   auth_token:
     secure: GITHUB_TOKEN
   artifact: /.*\.nupkg/
-  appveyor_repo_tag: ahj_2
   draft: false
   prerelease: false
-  on:
-    branch: main
-    appveyor_repo_tag: true
