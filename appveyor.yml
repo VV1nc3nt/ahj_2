@@ -11,7 +11,7 @@ cache: node_modules
 install:
   - npm install
 
-build: 
+build: off
 
 test_script:
   - npm run lint && npm test
@@ -21,6 +21,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: GITHUB_TOKEN
+  artifact: /.*\.nupkg/
   draft: false
   prerelease: false
   on:
