@@ -26,4 +26,4 @@ deploy:
   prerelease: false
   on:
     branch: main
-    appveyor_repo_tag: true
+    appveyor_repo_tag: ahj_2
