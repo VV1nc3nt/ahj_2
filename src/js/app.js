@@ -6,7 +6,7 @@ export default function addImgInRandomCell() {
     const gameCells = document.querySelectorAll('.game_cell');
     let randomNumber = Math.floor(Math.random() * gameCells.length);
     const cellImg = document.createElement('img');
-    cellImg.src = '../assets/img/goblin.png';
+    cellImg.src = './assets/img/goblin.png';
 
     // eslint-disable-next-line no-plusplus
     for (let counter = 0; counter < gameCells.length; counter++) {
